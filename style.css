@@ -64,8 +64,12 @@ input{
     border: 1px solid #000000;
 
 }
-input:clicked{
-    outline: 1px solid green;
+input:focus{
+    outline: none;
+    border: 1px solid green;
+}
+input:invalid{
+    border: 1px solid red;
 }
 button{
     padding: 7px 20px 7px 20px;
@@ -75,4 +79,8 @@ button{
     background:#000000;
     color: #fff;
     
+}
+button:hover{
+    background-color: #0ebd25;
+    cursor: pointer;
 }

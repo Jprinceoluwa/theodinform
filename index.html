@@ -46,22 +46,22 @@
                         </div>
                         <div class="pnumber">
                             <Label>Phone number</Label><br>
-                            <input type="num">
+                            <input type="number">
                         </div>
                     </div>
                     <div class="inputs">
                         <div class="pass">
                             <Label>Password</Label><br>
-                            <input type="password">
+                            <input type="password" id="password">
                         </div>
                         <div class="cpass">
                             <Label>Confirm password</Label><br>
-                            <input type="password">
+                            <input type="password" id="cpassword">
                         </div>
                       
                 </div>
                 <div class="inputs">
-                        <button>Create Account</button>
+                        <button onclick="verifyPass()">Create Account</button>
                     </div>
                   
             </div>
@@ -71,5 +71,16 @@
         </div>
     </div>
     
+    <script>
+        function verifyPass() {
+            let passOne = document.getElementById("password").value;
+            let passTwo = document.getElementById("cpassword").value;
+
+            if (passTwo !== passOne){
+                alert("passwords not correct")
+              
+            }
+        }
+    </script>
 </body>
 </html>
